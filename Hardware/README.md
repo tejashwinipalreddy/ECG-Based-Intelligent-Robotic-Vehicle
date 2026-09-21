@@ -26,7 +26,7 @@ ECG Electrodes → ECG Sensor → Arduino → Control Logic → Motor Driver →
 <img width="482" height="766" alt="image" src="https://github.com/user-attachments/assets/30c25e73-116d-4576-abf4-d34175fcce76" />
 The LCD display acts as a user interface in the proposed ECG-based robotic vehicle system. After the ECG signal is acquired through the electrodes and processed by the Arduino, the required information can be displayed on the LCD.
 How it works
-
+```text
 ECG Electrodes
 ↓
 ECG Sensor
@@ -40,6 +40,7 @@ Signal Processing / Decision Making
 LCD Display
 ↓
 Robot Control
+```
 The ECG electrodes detect the electrical activity of the heart. The ECG sensor converts the detected cardiac activity into an electrical signal, which is given to the Arduino.
 
 The Arduino reads the ECG data through its analog input and processes the acquired signal according to the programmed algorithm. Based on the processed information, the system can determine the required system status or control command.
@@ -52,7 +53,7 @@ These signals are given to the motor driver/control circuit. Since the Arduino c
 
 The motor driver controls the direction and operation of the DC motors according to the commands received from the Arduino.
 Working Flow
-
+```text
 Processed ECG Signal
 ↓
 Arduino / Microcontroller
@@ -64,12 +65,13 @@ Motor Driver
 DC Motors
 ↓
 Robot Movement 🚗
+```
 ## COMANDS
 Control Command → Motor Driver → Motors
-
+```text
 Forward command → Both motors move forward
 Stop command → Motors stop
 Left command → Motor speeds/directions are adjusted for left movement
 Right command → Motor speeds/directions are adjusted for right movement
-
+```
 The exact ECG-to-movement mapping depends on the control algorithm implemented in your project.
