@@ -17,3 +17,25 @@ The figure shows the ECG signal acquired from the subject and displayed on a com
 After electrode placement and signal acquisition, the ECG sensor sends the analog signal to the processing/controller unit. The signal is sampled and transmitted to the computer, where the acquired data is displayed as a continuous waveform.
 
 The displayed waveform contains variations corresponding to the cardiac electrical activity. In the initial acquisition stage, the signal may contain noise and fluctuations due to electrode contact, body movement, and other interference. The acquired data can subsequently be filtered and processed to obtain a cleaner ECG waveform.
+
+## Real-Time ECG Signal Acquired Through Serial Communication
+<img width="1583" height="768" alt="image" src="https://github.com/user-attachments/assets/3f59895d-00b8-4762-a39b-9c43e81c547e" />
+The figure shows the ECG data being received through the COM port and displayed as a continuous waveform on the computer. The waveform contains fluctuations representing the acquired cardiac electrical signal. The variations seen in the waveform can also be influenced by noise and motion artifacts.
+
+This raw acquired signal can be given to the next stage of the project for filtering, noise removal, feature extraction, and further analysis.
+#Arduino Data Acquisition#
+void setup()
+{
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    int ecgData;
+
+    ecgData = analogRead(A0);
+
+    Serial.println(ecgData);
+
+    delay(10);
+}
