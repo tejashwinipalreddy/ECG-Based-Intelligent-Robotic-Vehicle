@@ -24,6 +24,7 @@ The figure shows the ECG data being received through the COM port and displayed 
 
 This raw acquired signal can be given to the next stage of the project for filtering, noise removal, feature extraction, and further analysis.
 #Arduino Data Acquisition#
+```text
 void setup()
 {
     Serial.begin(9600);
@@ -39,3 +40,7 @@ void loop()
 
     delay(10);
 }
+```
+## Signal Stabilization:
+<img width="1526" height="747" alt="image" src="https://github.com/user-attachments/assets/8a688faf-a0af-453f-9059-3cfed736db70" />
+After placing the ECG electrodes, the acquired signal initially shows fluctuations and baseline variations due to electrode-skin contact, body movement, and other noise sources. As the electrode contact becomes stable and the subject remains still, the baseline gradually settles. The ECG signal is then continuously acquired as a periodic waveform corresponding to the cardiac activity. The signal is not expected to become completely constant because the electrical activity of the heart continuously changes with each heartbeat.
